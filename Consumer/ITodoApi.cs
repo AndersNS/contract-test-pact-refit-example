@@ -10,4 +10,9 @@ public interface ITodoApi
     Task<TodoItem> GetTodo(int id);
 }
 
-public record TodoItem(int Id, string Title, bool Done);
+public class TodoItem
+{
+    public int Id { get; set; }
+    public string Title { get; set; }
+    public bool Done { get; set; }
+}
