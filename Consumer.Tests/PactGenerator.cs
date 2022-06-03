@@ -12,17 +12,17 @@ using Xunit.Abstractions;
 
 namespace Consumer.Tests;
 
-public class UnitTest1
+public class PactGenerator
 {
     private readonly ITestOutputHelper _output;
 
-    public UnitTest1(ITestOutputHelper output)
+    public PactGenerator(ITestOutputHelper output)
     {
         _output = output;
     }
     
     [Fact]
-    public async Task Test1()
+    public async Task GeneratePactFile()
     {
         var pact = Pact.V3("API Consumer", "TODO Api", new PactConfig
         {
